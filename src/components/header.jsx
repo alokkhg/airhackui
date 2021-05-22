@@ -5,7 +5,7 @@ import RegisterForm from './userRegister';
 import AdminPage from './admin/adminpage';
 import AdminLogin from './admin/adminLogin';
 import AdminRegister from './admin/adminRegistration';
-
+import Announcement from './Ann/announcement';
 
 export default function Header() {
     return (
@@ -15,10 +15,11 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/admin">Admin</Nav.Link>
-                <Nav.Link href="#Home">QA</Nav.Link>
-                <Nav.Link href="#improvements">Improvements</Nav.Link>
-                <Nav.Item><Loginform /></Nav.Item>
-                <Nav.Link href="/register">Register</Nav.Link>
+                {/* <Nav.Link href="#Home">QA</Nav.Link> */}
+                {/* <Nav.Link href="#improvements">Improvements</Nav.Link> */}
+                <Nav.Link href="/announcements">Announcements</Nav.Link>
+                {/* <Nav.Item><Loginform /></Nav.Item> */}
+                {/* <Nav.Link href="/register">Register</Nav.Link> */}
             </Navbar>
 
             <Switch>
@@ -26,6 +27,7 @@ export default function Header() {
                 <Route path="/admin"><AdminPage /></Route>
                 <Route path="/adminlogin"><AdminLogin /> </Route>
                 <Route path="/adminregister"><AdminRegister /></Route>
+                <Route path="/announcements"><Announcement /></Route>
             </Switch>
         </>
     );
